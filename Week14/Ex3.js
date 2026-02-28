@@ -12,6 +12,9 @@ function findMax(nums) {
     // return result
 
     // for loop
+    if(!Array.isArray(nums)) return 'Input must be an array of numbers'
+    if(nums.length === 0) return 'Array should not empty to findMax'
+
     let max = -Infinity
     for(let num of nums){
         if(num > max){
@@ -26,3 +29,9 @@ console.log(result1); // 9
 
 let result2 = findMax([-10, -5, -2]);
 console.log(result2); // -2
+
+let result3 = findMax(1,2,3,4);
+console.log(result3); 
+
+let result4 = findMax([]);
+console.log(result4);

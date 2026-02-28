@@ -16,15 +16,15 @@
 //         console.log(result2); // false
 
 const isEvenNumber = (num) =>{
-    if(!Number(num)) return "this is not a number!";
+    if(!Number(num)) return "This is not a number!";
     return num % 2 === 0 ? true : false
 }
-
-console.log(isEvenNumber('me'))
-console.log(isEvenNumber('2'))
 
 let result1 = isEvenNumber(4);
 console.log(result1); // true
         
 let result2 = isEvenNumber(7);
 console.log(result2); // false
+
+console.log(isEvenNumber('me'))
+console.log(isEvenNumber('2'))

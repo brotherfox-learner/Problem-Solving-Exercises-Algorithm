@@ -18,6 +18,7 @@ function getPassedStudents(students) {
     // },[])
 
     //Logic
+    if(!Array.isArray(students)) return 'Input must be an array of students info.'
     let passedStudents = []
     for(let student of students){
         if(student.score >= 50){
@@ -32,4 +33,6 @@ let result1 = getPassedStudents([
     { name: "C", score: 60 }
 ]);
 console.log(result1); // ["A", "C"]
+let result2 = getPassedStudents('John score is 40, Tree score is 60');
+console.log(result2); 
 

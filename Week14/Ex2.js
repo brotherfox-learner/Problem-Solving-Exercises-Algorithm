@@ -10,6 +10,10 @@ function reverseString(text) {
     // return reverseText
 
     //Logic Loop
+    if(typeof text !== 'string'){
+        return 'Text must be a string.'
+    }
+
     const texts = text.split('')
     let answer = []
     for(let i = texts.length - 1; i >= 0; i--){
@@ -24,5 +28,8 @@ console.log(result1); // "olleh"
 
 let result2 = reverseString("TechUp");
 console.log(result2); // "pUhceT"
+
+let result3 = reverseString(3);
+console.log(result3); 
 
 

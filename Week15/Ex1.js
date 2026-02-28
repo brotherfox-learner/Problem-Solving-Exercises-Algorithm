@@ -9,13 +9,20 @@
 
 function countVowels(text) {
     //Start Coding Here
-    let vowels = 'aeiou'
+
+    //Built in
+    // let vowels = 'aeiou'
     let count = 0;
     // for (let char of text) {
     //     if(vowels.includes(char.toLowerCase())){
     //         count++
     //     }
     // }
+
+    //Logic loop
+    if(typeof text !== 'string'){
+        return 'Text must be a string.'
+    }
     for (let char of text) {
         let lower = char.toLowerCase()
         if (lower === 'a' || lower === 'e' || lower === 'i' || lower === 'o' || lower === 'u') {
@@ -30,3 +37,6 @@ console.log(result1); // 2
 
 let result2 = countVowels("TECHUP");
 console.log(result2); // 2
+
+let result3 = countVowels(213);
+console.log(result3); // 2

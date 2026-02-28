@@ -13,13 +13,14 @@ function isPalindrome(word) {
     // return word === reversedWord 
 
     //Logic
+    if(typeof word !== 'string'){
+        return 'Text must be a string.'
+    }
     let reversedWordArr = []
     for(let i = word.length -1; i >= 0; i--){
         reversedWordArr.push(word[i])
     }
     return word === reversedWordArr.join('')
-
-
 };
 
 let result1 = isPalindrome("madam");
@@ -27,4 +28,7 @@ console.log(result1); // true
 
 let result2 = isPalindrome("hello");
 console.log(result2); // false
+
+let result3 = isPalindrome(2);
+console.log(result3); 
 

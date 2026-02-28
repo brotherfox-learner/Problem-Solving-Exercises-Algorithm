@@ -9,6 +9,9 @@
 // สร้าง obj key num : value count เจอ ...spread , new : 0 ถ้ามีแล้ว ก็ ++
 function findMode(arr) {
     //Start Coding Here
+        if(!Array.isArray(arr)) return 'Input must be an array of numbers'
+    if(arr.length === 0) return 'Array should not empty to findMode'
+
     let counter = {}
     for (let num of arr) {
         if (!counter[num]) {
@@ -47,5 +50,8 @@ console.log(result1); // 3
 let result2 = findMode([7, 7, 1, 1, 7]);
 console.log(result2); // 7
 
-let result3 = findMode([7, 7, 1, 1, 7, 1]);
-console.log(result3); // 7
+let result3 = findMode([]);
+console.log(result3);
+
+let result4 = findMode('fds');
+console.log(result4);
